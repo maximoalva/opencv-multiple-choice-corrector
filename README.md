@@ -42,6 +42,6 @@ Este repositorio contiene la resolución del primer trabajo práctico de la mate
    ```
 2. Asegurate de tener instaladas las librerías necesarias:
    ```bash
-   pip install opencv-contrib-python numpy matplotlib
+   pip install opencv-contrib-Python numpy matplotlib
    ```
 3. Ahora sí está todo listo para correr el código.
