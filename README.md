@@ -1,17 +1,47 @@
-# TP1_2024-PDI-GRUPO-5
+# Multiple choice corrector & Image processing toolkit
 
-Pasos necesarios para el correcto funcionamiento del TP.  
-Clonar el repositorio del link que se adjunta a continuación: https://github.com/CasadoPedro/TP1_2024-PDI-GRUPO-5/  
-Desde la terminal acceder a la carpeta TP1 con el comando: cd .\TP1\  
-Instalar python en el entorno que se desee utilizar. Puede hacerse desde https://www.python.org/downloads/ para Windows, o con los siguientes comandos para Linux:   
-Verifica si Python está instalado:  
-python --version  
-  
-Si Python no está instalado:  
-sudo apt update  
-sudo apt install python3  
-sudo apt install python3-pip  
-Instalar las siguientes librerías que son necesarias para ejecutar los ejercicios del TP:   
-	1.OpenCV: pip install opencv-contrib-Python  
-	2.NumPy: pip install numpy  
-	3.matplotlib: pip install matplotlib  
+> Procesamiento de Imágenes - TP 1  
+> Tecnicatura Universitaria en Inteligencia Artificial (Universidad Nacional de Rosario)  
+> Facundo Geuna, Pedro Casado, Máximo Alva  
+> 2024
+
+---
+
+## Sobre el proyecto
+Este repositorio contiene la resolución del primer trabajo práctico de la materia **Procesamiento de Imágenes**. El proyecto combina técnicas de visión por computadora y manipulación de matrices para resolver dos problemas distintos.
+
+---
+
+## Problemas
+
+### 1. Ecualización local de histogramas
+* **Objetivo:** Revelar detalles y objetos ocultos dentro de áreas de baja visibilidad aplicando ecualización local de histogramas.
+* **Implementación:** Se desarrolló una función con ventanas deslizantes de tamaño variable (`size`) utilizando bordes espejados (`cv2.BORDER_REPLICATE`)
+
+### 2. Corrector automático de exámenes multiple choice
+* **Objetivo:** Automatizar la corrección de exámenes multiple choice y la validación de sus datos de cabecera.
+* **Implementación:** 
+  * Se diseñaron funciones para la detección de líneas horizontales y verticales que permiten aislar la grilla y las celdas de las preguntas.
+  * Se implementó el análisis de componentes conectados (`cv2.connectedComponentsWithStats`) para evaluar los recuadros de respuesta y diferenciar letras manuscritas (A, B, C, D) según sus contornos y áreas.
+  * Se automatizó la validación de restricciones en los campos de cabecera (*Name*, *Date*, *Class*) y se generó un reporte gráfico resumen con códigos de color para alumnos aprobados y desaprobados.
+
+---
+
+## Stack tecnológico
+* Python
+* OpenCV
+* NumPy
+* Matplotlib
+
+---
+
+## Cómo ejecutarlo
+1. Cloná el repositorio.
+	```bash
+   git clone https://github.com/maximoalva/opencv-multiple-choice-corrector.git
+   ```
+2. Asegurate de tener instaladas las librerías necesarias:
+   ```bash
+   pip install opencv-contrib-python numpy matplotlib
+   ```
+3. Ahora sí está todo listo para correr el código.
