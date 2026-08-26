@@ -44,4 +44,7 @@ Este repositorio contiene la resolución del primer trabajo práctico de la mate
    ```bash
    pip install opencv-contrib-Python numpy matplotlib
    ```
-3. Ahora sí está todo listo para correr el código.
+3. ¡Ahora sí está todo listo para correr el código!
+   ```bash
+   python main.py
+   ```
